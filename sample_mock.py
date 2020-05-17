@@ -16,8 +16,8 @@ class SampleMock(HttpMock):
         """ routes """
         self._add_route('get_users', 'GET', self._get_users_path, self._get_users_handler())
 
-    def add_user(self, shop: dict):
-        self._users[shop['id']] = shop
+    def add_user(self, user: dict):
+        self._users[user['id']] = user
 
     def _get_users_handler(self):
         if request not in self._requests:
